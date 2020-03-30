@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Customers</title>
+        <link rel="stylesheet" href="css/customers.css">
+
+        <script defer src="/__/firebase/7.13.1/firebase-app.js"></script>
+        <script defer src="/__/firebase/7.13.1/firebase-firestore.js"></script>
+        <script defer src="/__/firebase/7.13.1/firebase-analytics.js"></script>
+        <script defer src="/__/firebase/init.js"></script>
+        <script src="js/app.js"></script>
+    </head>
+    <body>
+        <header>
+            <h1>Safe Foods</h1>
+            <nav>
+                <a href="index.html">About</a>
+                <a class="active" href="customers.html">Customers</a>
+                <a href="volunteers.html">Delivery Volunteers</a>
+                <a href="contact.html">Contact Us</a>
+            </nav>
+        </header>
+        
+        <br>
+        <h2 style="text-decoration: underline;">Fill out this form if you are in need of groceries:</h2>
+        <form action="#" onsubmit="saveCustomer(this); saveOrders(this); return false;">
+            <fieldset>
+                <legend>Customer Info</legend>
+                <label>Name: <input type="text" name="name" placeholder ="Your full name" required>*</label><br>
+                <label>Phone: <input type="tel" name="phone" placeholder="xxx-xxx-xxxx" required>*</label><br>
+                <label>Email: <input type="email" name="email" placeholder = "your@email.com" required>*</label><br>
+                <label>Address: <textarea name="address" cols="20" rows ="1" placeholder = "123 State Ave" required></textarea>*</label><br>
+                <label>City: <input type="text" name="city" required>*</label><br>
+                <label>Zip Code: <input type="text" name="zipcode"required> *</label><br>
+                <label style="font-size: 80%;">*required</label>
+            </fieldset>
+
+            <fieldset>
+                <legend>Order</legend>
+                <table>
+                    <tr>
+                        <th>Categories</th>
+                        <th>Items</th>
+                        <th>Quantity</th>
+                    </tr>
+                    <tr>
+                        <td id="fruits" rowspan="8"><span>Fruits</span></td>
+                        <td><input type="checkbox" name="apples">Apples</td>
+                        <td><input type="number" min="0" name="applesQ"></td>
+                    </tr>
+                    <tr>
+                        <td><input type="checkbox" name="bananas">Bananas</td>
+                        <td><input type="number" min="0" name="bananasQ"></td>
+                    </tr>
+                    <tr>
+                        <td><input type="checkbox" name="oranges">Oranges</td>
+                        <td><input type="number" min="0" name=orangesQ></td>
+                    </tr>
+                    <tr>
+                        <td><input type="checkbox" name="grapes">Grapes</td>
+                        <td><input type="number" min="0" name="grapesQ"></td>
+                    </tr>
+                    <tr>
+                        <td><input type="checkbox" name="strawberries">Strawberries</td>
+                        <td><input type="number" min="0" name="strawberriesQ"></td>
+                    </tr>
+                    <tr>
+                        <td><input type="checkbox" name="blueberries">Blueberries</td>
+                        <td><input type="number" min="0" name="blueberriesQ"></td>
+                    </tr>
+                    <tr>
+                        <td><input type="checkbox" name="lemons">Lemons</td>
+                        <td><input type="number" min="0" name="lemonsQ"></td>
+                    </tr>
+                    <tr>
+                        <td><input type="checkbox" name="pears">Pears</td>
+                        <td><input type="number" min="0" name="pearsQ"></td>
+                    </tr>
+                    <tr>
+                        <td id="vegetables" rowspan="13"><span>Vegetables</span></td>
+                        <td><input type="checkbox" name="broccoli">Broccoli</td>
+                        <td><input type="number" min="0" name="broccoliQ"></td>
+                    </tr>
+                    <tr>
+                        <td><input type="checkbox" name="cabbage">Cabbage</td>
+                        <td><input type="number" name="cabbageQ"></td>
+                    </tr>
+                    <tr>
+                        <td><input type="checkbox" name="carrots">Carrots</td>
+                        <td><input type="number" min="0"  name="carrotsQ"></td>
+                    </tr>
+                    <tr>
+                        <td><input type="checkbox" name="cauliflower">Cauliflower</td>
+                        <td><input type="number" min="0" name="cauliflowerQ"></td>
+                    </tr>
+                    <tr>
+                        <td><input type="checkbox" name="gbeans">Green Beans</td>
+                        <td><input type="number" min="0" name="gbeansQ"></td>
+                    </tr>
+                    <tr>
+                        <td><input type="checkbox" name="ginger">Ginger</td>
+                        <td><input type="number" min="0" name="gingerQ"></td>
+                    </tr>
+                    <tr>
+                        <td><input type="checkbox" name="lettuce">Lettuce</td>
+                        <td><input type="number" min="0" name="lettuceQ"></td>
+                    </tr>
+                    <tr>
+                        <td><input type="checkbox" name="mushrooms">Mushrooms</td>
+                        <td><input type="number" min="0" name="mushroomsQ"></td>
+                    </tr>
+                    <tr>
+                        <td><input type="checkbox" name="onions">Onions</td>
+                        <td><input type="number" min="0" name="onionsQ"></td>
+                    </tr>
+                    <tr>
+                        <td><input type="checkbox" name="peppers">Bell Peppers</td>
+                        <td><input type="number" min="0" name="peppersQ"></td>
+                    </tr>
+                    <tr>
+                        <td><input type="checkbox" name="potatoes">Potatoes</td>
+                        <td><input type="number" min="0" name="potatoesQ"></td>
+                    </tr>
+                    <tr>
+                        <td><input type="checkbox" name="spinach">Spinach</td>
+                        <td><input type="number" min="0" name="spinachQ"></td>
+                    </tr>
+                    <tr>
+                        <td><input type="checkbox" name="tomatoes">Tomatoes</td>
+                        <td><input type="number" min="0" name="tomatoesQ"></td>
+                    </tr>
+                    <tr>
+                        <td id="grains" rowspan="6"><span>Grains</span></td>
+                        <td><input type="checkbox" name="wwbread">Whole Wheat Bread</td>
+                        <td><input type="number" min="0" name="wwbreadQ"></td>
+                    </tr>
+                    <tr>
+                        <td><input type="checkbox" name="whbread">White Bread</td>
+                        <td><input type="number" min="0" name="whbreadQ"></td>
+                    </tr>
+                    <tr>
+                        <td><input type="checkbox" name="spaghetti">Spaghetti</td>
+                        <td><input type="number" min="0" name="spaghettiQ"></td>
+                    </tr>
+                    <tr>
+                        <td><input type="checkbox" name="rotini">Rotini</td>
+                        <td><input type="number" min="0" name="rotiniQ"></td>
+                    </tr>
+                    <tr>
+                        <td><input type="checkbox" name="shells">Shells</td>
+                        <td><input type="number" min="0" name="shellsQ"></td>
+                    </tr>
+                    <tr>
+                        <td><input type="checkbox" name="gfpasta">Gluten Free Pasta</td>
+                        <td><input type="number" min="0" name="gfpastaQ"></td>
+                    </tr>
+                    <tr>
+                        <td id="dairy" rowspan="12"><span>Dairy</span></td>
+                        <td><input type="checkbox" name="wmilk">Whole Milk</td>
+                        <td><input type="number" min="0" name="wmilkQ"></td>
+                    </tr>
+                    <tr>
+                        <td><input type="checkbox" name="dmilk">Vitamin D Milk</td>
+                        <td><input type="number" min="0" name="dmilkQ"></td>
+                    </tr>
+                    <tr>
+                        <td><input type="checkbox" name="milk2">2% Milk</td>
+                        <td><input type="number" min="0" name="milk2Q"></td>
+                    </tr>
+                    <tr>
+                        <td><input type="checkbox" name="nfmilk">Nonfat Milk</td>
+                        <td><input type="number" min="0" name="nfmilkQ"></td>
+                    </tr>
+                    <tr>
+                        <td><input type="checkbox" name="amilk">Almond Milk</td>
+                        <td><input type="number" min="0" name="amilkQ"></td>
+                    </tr>
+                    <tr>
+                        <td><input type="checkbox" name="smilk">Soy Milk</td>
+                        <td><input type="number" min="0" name="smilkQ"></td>
+                    </tr>
+                    <tr>
+                        <td><input type="checkbox" name="eggs">Eggs</td>
+                        <td><input type="number" min="0" name="eggsQ"></td>
+                    </tr>
+                    <tr>
+                        <td><input type="checkbox" name="cheddar">Cheddar</td>
+                        <td><input type="number" min="0" name="cheddarQ"></td>
+                    </tr>
+                    <tr>
+                        <td><input type="checkbox" name="ccheese">Cream Cheese</td>
+                        <td><input type="number" min="0" name="ccheeseQ"></td>
+                    </tr>
+                    <tr>
+                        <td><input type="checkbox" name="butter">Butter</td>
+                        <td><input type="number" min="0" name="butterQ"></td>
+                    </tr>
+                    <tr>
+                        <td><input type="checkbox" name="tyogurt">Traditional Yogurt</td>
+                        <td><input type="number" min="0" name="tyogurtQ"></td>
+                    </tr>
+                    <tr>
+                        <td><input type="checkbox" name="gyogurt">Greek Yogurt</td>
+                        <td><input type="number" min="0" name="gyogurtQ"></td>
+                    </tr>
+                </table>
+
+                <div class="other">
+                    <label id="label">Is there any other food item that you need specifically?</label>
+                    <br>
+                    <textarea name="other" id="area" cols="35" rows ="5"></textarea>
+                </div>
+                
+                <div class="container">
+                    <div class="button-wrapper">
+                        <input class="button" type="submit" value="Submit" onclick="orderAccepted()">
+                        <input class="button" type="reset" value="Reset" onclick="resetPage()">
+                    </div>
+                </div>
+
+                <div id="accepted">
+                    <p>Order Accepted!</p>
+                </div>
+            </fieldset>
+        </form>
+
+        <br>
+
+        <p>We will reach out to you once your order is being processed and on its way to your door, as we promote social
+            distancing through non-contact delivery. Payments will be made directly to the volunteer driver through PayPal or
+            Venmo, unless other arrangements have been made. 
+        </p>
+        <p>Make sure to take out your groceries on a clean table and to transfer items from their respective plastic/cardboard packaging
+            to different containers if possible.
+        </p>
+
+    </body>
+</html>
