@@ -1,0 +1,178 @@
+body {
+    background-color: #E0F5DA;
+    font-family: 'Segoe UI', Tahoma, Arial, sans-serif;
+}
+
+header {
+    text-align: center;
+}
+
+h1 {
+    font-size: 300%;
+    text-transform: uppercase;
+}
+
+nav {
+    padding: 1% 4%;
+    font-size: 120%;
+}
+
+nav a {
+    color: #ffffff;
+    background-color: rgba(0, 0, 0, 0.3);
+    padding: 1% 3%;
+    margin: 5%;
+}
+
+.active, nav a:hover {
+    color: #000000;
+    background-color: #ffffff;
+}
+
+h2 {
+    margin-left: 2%;
+}
+
+p, form {
+    padding-left: 2%;
+    padding-right: 2%;
+    font-size: 120%;
+}
+
+table, th, td {
+    margin: 2%;
+    border: 2px solid #000000;
+}
+
+table {
+    margin: 0 auto;
+    width: 75%;
+    text-align: center;
+}
+
+th {
+    background-color: rgba(0, 0, 0, 0.3);
+    font-size: 120%;
+}
+
+th:hover {
+    background-color: #B3F7A0;
+}
+
+td {
+    padding: 1%;
+}
+
+td:hover {
+    background-color: #B3F7A0;
+}
+
+#fruits {
+    color: #000000;
+    font-size: 120%;
+    font-weight: bold;
+    background-color: #B3F7A0;
+    background-image: url("../imgs/fruits.jpg");
+    opacity: 0.7;
+}
+
+#vegetables {
+    color: #000000;
+    font-size: 120%;
+    font-weight: bold;
+    background-color: #B3F7A0;
+    background-image: url("../imgs/vegetables.jpg");
+    opacity: 0.7;
+}
+
+#grains {
+    color: #000000;
+    font-size: 120%;
+    font-weight: bold;
+    background-color: #B3F7A0;
+    background-image: url("../imgs/grains.jpg");
+    opacity: 0.7;
+}
+
+#dairy {
+    color: #000000;
+    font-size: 120%;
+    font-weight: bold;
+    background-color: #B3F7A0;
+    background-image: url("../imgs/dairy.jpg");
+    opacity: 0.7;
+}
+
+span {
+    color: #000000;
+    font-size: 120%;
+    font-weight: bold;
+    background-color: #B3F7A0;
+}
+
+.other {
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    padding: 1%;
+    font-size: 110%;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 1%;
+    font-size: 110%;
+}
+
+.button {
+    font-size: 100%;
+}
+
+#accepted {
+    display: none;
+    text-align: center;
+    font-weight: bold;
+}
+
+@media screen and (min-width: 150px) {
+    nav {
+        display: grid;
+        margin: 1%;
+    }
+
+    iframe {
+        width: 100%;
+    }
+}
+
+@media screen and (min-width: 460px) {
+    nav a {
+        font-size: 90%;
+    }
+}
+
+@media screen and (min-width: 860px) {
+    nav {
+        display: inline;
+    }
+    nav a {
+        font-size: 100%;
+        margin: 2%;
+    }
+}
+
+@media screen and (min-width: 1360px) {
+    nav {
+        display: inline;
+    }
+    nav a {
+        font-size: 110%;
+        margin: 4%;
+    }
+    iframe {
+        width: 90%;
+    }
+}
+
