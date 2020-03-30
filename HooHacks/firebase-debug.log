@@ -1,0 +1,26 @@
+[debug] [2020-03-29T21:42:22.631Z] ----------------------------------------------------------------------
+[debug] [2020-03-29T21:42:22.634Z] Command:       C:\Program Files\nodejs\node.exe C:\Users\anchi\AppData\Roaming\npm\node_modules\firebase-tools\lib\bin\firebase.js serve --only hosting
+[debug] [2020-03-29T21:42:22.634Z] CLI Version:   7.16.1
+[debug] [2020-03-29T21:42:22.634Z] Platform:      win32
+[debug] [2020-03-29T21:42:22.634Z] Node Version:  v12.6.0
+[debug] [2020-03-29T21:42:22.635Z] Time:          Sun Mar 29 2020 17:42:22 GMT-0400 (Eastern Daylight Time)
+[debug] [2020-03-29T21:42:22.635Z] ----------------------------------------------------------------------
+[debug] [2020-03-29T21:42:22.635Z] 
+[debug] [2020-03-29T21:42:22.644Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2020-03-29T21:42:22.644Z] > authorizing via signed-in user
+[debug] [2020-03-29T21:42:22.644Z] [iam] checking project safe-foods-3bfb3 for permissions ["firebase.projects.get"]
+[debug] [2020-03-29T21:42:22.647Z] > refreshing access token with scopes: ["email","https://www.googleapis.com/auth/cloud-platform","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","openid"]
+[debug] [2020-03-29T21:42:22.648Z] >>> HTTP REQUEST POST https://www.googleapis.com/oauth2/v3/token  
+ <request body omitted>
+[debug] [2020-03-29T21:42:22.834Z] <<< HTTP RESPONSE 200
+[debug] [2020-03-29T21:42:22.852Z] >>> HTTP REQUEST POST https://cloudresourcemanager.googleapis.com/v1/projects/safe-foods-3bfb3:testIamPermissions  
+
+[debug] [2020-03-29T21:42:23.188Z] <<< HTTP RESPONSE 200
+[debug] [2020-03-29T21:42:23.192Z] >>> HTTP REQUEST GET https://firebase.googleapis.com/v1beta1/projects/safe-foods-3bfb3  
+ 
+[debug] [2020-03-29T21:42:23.471Z] <<< HTTP RESPONSE 200
+[debug] [2020-03-29T21:42:23.477Z] >>> HTTP REQUEST GET https://firebase.googleapis.com/v1beta1/projects/safe-foods-3bfb3/webApps/-/config  
+ 
+[debug] [2020-03-29T21:42:24.244Z] <<< HTTP RESPONSE 200
+[info] i  hosting: Serving hosting files from: public
+[info] +  hosting: Local server: http://localhost:5000

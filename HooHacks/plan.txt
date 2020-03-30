@@ -1,0 +1,49 @@
+target audience: elderly
+name of web app: Safe Groceries
+
+navigation bar on the side or the top
+
+HOME     CUSTOMERS      (DELIVERY) VOLUNTEERS      CONTACT US
+
+HOME and ABOUT US
+purpose
+
+CUSTOMERS
+order form:
+  fruits
+     apples
+     bananas
+     oranges
+     grapes
+     
+     ...
+  veggies
+     carrots
+        quantity:
+     ...
+  dairy
+     milk
+     eggs
+     cheese
+     ...
+  grains
+     bread
+     pasta
+
+DELIVERY VOLUNTEERS
+map of orders near them
+precautions: hyperlink
+delivery person form for signup: (on side)
+name
+age
+date of birth
+picture of driver's license
+symptoms?
+
+
+CONTACT US
+our contact info
+
+
+
+  

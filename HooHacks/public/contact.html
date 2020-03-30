@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Contact Us</title>
+        <link rel="stylesheet" href="css/contact.css">
+
+        <script defer src="/__/firebase/7.13.1/firebase-app.js"></script>
+        <script defer src="/__/firebase/7.13.1/firebase-firestore.js"></script>
+        <script defer src="/__/firebase/7.13.1/firebase-analytics.js"></script>
+        <script defer src="/__/firebase/init.js"></script>
+        <script src="js/app.js"></script>
+    </head>
+    <body>
+        <header>
+            <h1>Safe Foods</h1>
+            <nav>
+                <a href="index.html">About</a>
+                <a href="customers.html">Customers</a>
+                <a href="volunteers.html">Delivery Volunteers</a>
+                <a class="active" href="contact.html">Contact Us</a>
+            </nav>
+        </header>
+
+        <section id="Contact">
+            <h2>If you have any questions, please fill out the form below:</h2>
+            <form action="#" onsubmit="saveContact(this); return false;">
+                <fieldset>
+                    <legend>Contact Information</legend>
+                    <label>Name: <input type="text" name="name" placeholder ="Your full name" required>*</label><br>
+                    <label>Email: <input type="email" name="email" placeholder = "your@email.com" required>*</label><br>
+                    <label>Message:*</label><br>
+                    <textarea name="message" cols="50" rows ="10" required></textarea>
+                    <p style="font-size: 80%;">*required</p>
+                    <input type="submit" value="Submit">
+                    <input type="reset" value="Reset">
+                </fieldset>
+            </form>
+        </section>
+    </body>
+</html>

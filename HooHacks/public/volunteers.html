@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>New Volunteers</title>
+        <link rel="stylesheet" href="css/volunteers.css">
+
+        <script defer src="/__/firebase/7.13.1/firebase-app.js"></script>
+        <script defer src="/__/firebase/7.13.1/firebase-firestore.js"></script>
+        <script defer src="/__/firebase/7.13.1/firebase-analytics.js"></script>
+        <script defer src="/__/firebase/init.js"></script>
+        <script src="js/app.js"></script>
+    </head>
+    <body>
+        <header>
+            <h1>Safe Foods</h1>
+            <nav>
+                <a href="index.html">About</a>
+                <a href="customers.html">Customers</a>
+                <a class="active" href="volunteers.html">Delivery Volunteers</a>
+                <a href="contact.html">Contact Us</a>
+            </nav>
+        </header>
+
+        <section>
+            <h2>Please refrain from signing up to volunteer if you are experiencing any of the following: </h2> 
+            <ul> 
+                <li>Fever</li> 
+                <li>Cough</li>
+                <li>Difficulty Breathing</li>
+                <li>Flu and Cold Symptoms</li>
+                <li>Unusual Symptoms</li>         
+            </ul>
+        </section> 
+
+        <section>
+            <h2>Otherwise, please fill out this form, and we thank you for helping out!</h2>
+            <form action="#" onsubmit="saveVolunteer(this); return false;">
+                <fieldset>
+                    <legend>Volunteer Info</legend>
+                    <label>Name: <input type="text" name="name" placeholder ="Your full name" required>*</label><br>
+                    <label>Email: <input type="email" name="email" placeholder = "your@email.com" required>*</label><br>
+                    <label>Phone: <input type="tel" name="phone" placeholder="123-456-7890" required>*</label><br>
+                    <label>Do you have a means of transportation?* <input type="radio" name="transportYes"> Yes <input type="radio" name="transportNo"> No </label><br>
+                    <label>Are you between the age of 18 and 45?* <input type="radio" name="qualifiedAgeYes"> Yes <input type="radio" name="qualifiedAgeNo"> No</label><br>
+                    <label>Is there anything else we should know about you?</label><br>
+                    <textarea name="extra" cols="35" rows ="5"></textarea>
+                    <p style="font-size: 80%;">*required</p>
+                    <input type="submit" value="Submit">
+                    <input type="reset" value="Reset"> 
+                </fieldset>
+            </form>
+            <p>Registered volunteers, please go <a href="orders.html">here.</a></p>
+        </section>
+
+        <section>
+            <h2>Follow these sanitizing tips!</h2>
+            <ul>
+                <li>Go to the grocery store when it is not crowded</li>
+                <li>Use sanitizing wipes on cart and products</li>
+                <li>Wear gloves and properly dispose of them when done</li>
+                <li>Use wipes to open freezer doors</li>
+                <li>Don't touch face while shopping </li>
+                <li>Social distancing (6 ft)</li>
+                <li>Try paying virtually at cashier by tapping card or Apple Pay/Android Pay</li>
+                <li>Sanitize before touching door handle</li>
+                <li>Wash fresh produce and use disinfectant spray on cardboard/plastic items</li>
+                <li>Clean reusable bag if that is what you are using</li>
+            </ul>
+            <iframe width="1100" height="720" src="https://youtube.com/embed/taOUVUp1Pqw" alt="Video on how to grocery shope safely"></iframe>
+            <p id="citation">Coronavirus tips by syracuse.com</p>
+        </section>
+
+        <section>
+            <p>Save your receipt, as payment will be completed electronically through Venmo or PayPal
+                unless specified otherwise. Drop-off will be placed outside front door, unless said differently
+                as well.</p>
+            <p><strong>Stay safe and thank you!</strong></p>
+        </section>  
+    </body>
+</html>
